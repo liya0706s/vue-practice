@@ -15,7 +15,13 @@ const app = Vue.createApp({
       // event.preventDefault();
       alert('Submitted!');
     },
-    setName(event, lastName){
+    outputFullname(){
+      if(this.name === ''){
+        return '';
+      }
+      return this.name + ' ' + 'Lee';
+    },
+    setName(event){
       this.name=event.target.value;
     },
     add(num){
